@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 
 import { AppComponent } from './app.component';
@@ -11,6 +12,7 @@ import { FooterComponent } from './navegacao/footer/footer.component';
 import { SobreComponent } from './institucional/sobre/sobre.component';
 import { ContatoComponent } from './institucional/contato/contato.component';
 import { rootRouterConfig } from './app.routes';
+import { DatabindingComponent } from './demos/databinding/databinding.component';
 
 @NgModule({
   declarations: [
@@ -19,10 +21,12 @@ import { rootRouterConfig } from './app.routes';
     HomeComponent,
     FooterComponent,
     SobreComponent,
-    ContatoComponent
+    ContatoComponent,
+    DatabindingComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     [RouterModule.forRoot(rootRouterConfig, { useHash: false })]
   ],
   providers: [
