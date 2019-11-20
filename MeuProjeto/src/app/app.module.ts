@@ -13,6 +13,7 @@ import { SobreComponent } from './institucional/sobre/sobre.component';
 import { ContatoComponent } from './institucional/contato/contato.component';
 import { rootRouterConfig } from './app.routes';
 import { DatabindingComponent } from './demos/databinding/databinding.component';
+import { ProdutoService } from './produtos/produtos.service';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { DatabindingComponent } from './demos/databinding/databinding.component'
     [RouterModule.forRoot(rootRouterConfig, { useHash: false })]
   ],
   providers: [
+    ProdutoService,
     { provide: APP_BASE_HREF, useValue: '/' }
   ],
   bootstrap: [AppComponent]
